@@ -1,21 +1,20 @@
 import { Link } from "react-router-dom"
 import styles from "./index.module.css"
-import {  useState } from "react"
+import { useState } from "react"
 
 export const Header = () => {
-    
-    
+
+
     const [menuOpen, setMenuOpen] = useState(false)
     return (
         <header className={`${styles.header} ${menuOpen ? styles.grow : ""}`}>
             <div className={styles.logoSection}>
                 <Link to="/" className={styles.imageContainer}>
-                <img src="/assets/logoUDC_normal.png" alt="Logo UDC" />
-                    
+                    <img src="/assets/logoUDC_normal.png" alt="Logo UDC" />
                 </Link>
 
                 <div className={`${styles.logoDescription} ${menuOpen ? styles.hidden : ""}`}>
-                    <h1>Sistema SMA</h1>
+                    <h1>AcademiCORE</h1>
                     <p>Sistema de información académica</p>
                 </div>
             </div>
@@ -49,7 +48,7 @@ export const Header = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link className={ `${styles.loginButton2}`} to="/iniciarSesion" >
+                        <Link className={`${styles.loginButton2}`} to="/iniciarSesion" >
 
                             <img src="" alt="" />
                             <span>Iniciar sesión</span>

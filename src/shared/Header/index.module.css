@@ -1,4 +1,6 @@
-.header{
+
+
+.header {
     width: 90%;
     margin: auto;
     display: flex;
@@ -7,51 +9,60 @@
     align-items: center;
     background-color: #ffffff67;
     backdrop-filter: blur(30px);
-    
+
 }
 
-.logoSection{
+.logoSection {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    
+
 }
-.logoSection img{
+
+.logoSection img {
     max-width: 10vw;
     padding-right: 1rem;
     border-right: 1px solid #e4e4e4;
 }
-.logoDescription h1{
+
+.logoDescription h1 {
     color: var(--primary-color);
+    font-size: 1.5rem;motion: ;
 }
 
-.logoDescription p{
-    font-size: 1rem;
+.logoDescription p {
+    font-size: 1rem;margin: 0;
     color: var(--font-color-light);
 }
-.headerList{
+
+.headerList {
     display: flex;
     align-items: center;
     gap: 2rem;
     list-style: none;
+    margin: 0;
 }
 
-.headerLink{
+.headerLink {
     text-decoration: none;
     color: var(--font-color-dark);
+    
 
 }
-.doubleLink{
+
+.doubleLink {
     display: flex;
     align-items: center;
     gap: 0.2rem;
 
 }
-.doubleLink img{
+
+.doubleLink img {
     max-width: 30%;
 }
-.loginButton{
+
+.loginButton {
     background-color: var(--primary-color);
     color: #fff;
     padding: 10px 20px;
@@ -60,9 +71,10 @@
     text-decoration: none;
 }
 
-.loginButton2{
+.loginButton2 {
     display: none;
 }
+
 .menuButton {
     display: none;
     width: 35px;
@@ -116,15 +128,16 @@
 }
 
 @media (max-width: 748px) {
-    .header{
+    .header {
         width: 90%;
         margin-top: 10px;
         border: 1px solid #e4e4e4;
         border-radius: 3rem;
         min-height: 10vh;
     }
+
     .header.grow {
-        
+
         height: 380px;
         border-radius: 2rem;
         align-items: flex-start;
@@ -136,7 +149,7 @@
         justify-content: center;
         width: 12vw;
         height: 12vw;
-        
+
     }
 
 
@@ -144,8 +157,8 @@
         position: absolute;
         top: 10vh;
         left: 0;
-        right: 0;   
-        
+        right: 0;
+
 
         display: flex;
         flex-direction: column;
@@ -172,23 +185,28 @@
         transform: translateY(0);
         pointer-events: all;
     }
-    .logoDescription{
+
+    .logoDescription {
         display: none;
     }
-    .loginButton{
+
+    .loginButton {
         display: none;
     }
-    .loginButton2{
+
+    .loginButton2 {
         display: block;
     }
-    .logoSection{
+
+    .logoSection {
         display: flex;
         align-items: center;
         width: 50%;
         align-items: center;
-        
+
     }
-    .logoSection img{
+
+    .logoSection img {
         max-width: 100%;
         width: 100%;
         border-right: none;
