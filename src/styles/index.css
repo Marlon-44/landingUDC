@@ -1,0 +1,18 @@
+:root {
+  --main-font: "Poppins", sans-serif;
+  --primary-color: #044080;
+  --font-color-light: #7c7c7c;
+
+  --font-color-dark: #1d1d1d;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,p,a,li{
+
+  font-family: var(--main-font);
+}

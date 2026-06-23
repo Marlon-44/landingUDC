@@ -1,0 +1,76 @@
+import { Link } from "react-router-dom"
+import styles from "./index.module.css"
+import {  useState } from "react"
+
+export const Header = () => {
+    
+    
+    const [menuOpen, setMenuOpen] = useState(false)
+    return (
+        <header className={`${styles.header} ${menuOpen ? styles.grow : ""}`}>
+            <div className={styles.logoSection}>
+                <Link to="/" className={styles.imageContainer}>
+                <img src="/assets/logoUDC_normal.png" alt="Logo UDC" />
+                    
+                </Link>
+
+                <div className={`${styles.logoDescription} ${menuOpen ? styles.hidden : ""}`}>
+                    <h1>Sistema SMA</h1>
+                    <p>Sistema de información académica</p>
+                </div>
+            </div>
+
+
+            <nav>
+                <ul className={`${styles.headerList} ${menuOpen ? styles.open : ""} `}>
+                    <li>
+                        <Link to="/convocatorias" className={styles.headerLink}>
+                            Convocatorias
+                        </Link>
+                    </li>
+
+                    <li>
+                        <Link to="/estudiantes" className={styles.headerLink}>
+                            Estudiantes
+                        </Link>
+                    </li>
+
+                    <li>
+                        <Link to="/docentes" className={styles.headerLink}>
+                            Docentes
+                        </Link>
+                    </li>
+
+                    <li >
+                        <Link to="/ayuda" className={`${styles.headerLink} ${styles.doubleLink}`} >
+
+                            <span>Ayuda</span>
+                            <img src="/assets/help.png" alt="Icono de ayuda" />
+                        </Link>
+                    </li>
+                    <li>
+                        <Link className={ `${styles.loginButton2}`} to="/iniciarSesion" >
+
+                            <img src="" alt="" />
+                            <span>Iniciar sesión</span>
+                        </Link>
+                    </li>
+                </ul>
+            </nav>
+
+            <Link className={`${styles.loginButton}`} to="/iniciarSesion">
+
+                <img src="" alt="" />
+                <span>Iniciar sesión</span>
+            </Link>
+            <button
+                className={`${styles.menuButton} ${menuOpen ? styles.active : ""}`}
+                onClick={() => setMenuOpen(!menuOpen)}
+            >
+                <span></span>
+                <span></span>
+            </button>
+
+        </header>
+    )
+}
