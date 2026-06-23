@@ -1,0 +1,44 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    width: 100%;
+    padding: 1rem;
+}
+.footerTop{
+    display: flex;
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+}
+.footerList{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+}
+
+.headerLink{
+    text-decoration: none;
+    color: #fff;
+    margin: 0;
+    font-size: 0.8rem;
+
+}
+.footer p{
+    color: #fff;
+    margin: auto;
+    padding: 10px 0;
+    font-size: 0.8rem;
+}
+.redes{
+    display: flex;
+    gap: 1rem;
+}
+.redes img{
+    width: 40px;
+    height: 40px;
+}
