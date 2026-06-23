@@ -10,7 +10,7 @@ export const Banner = () => {
             <div className={styles.content}>
                     <h3>BIENVENIDO A</h3>
                     <h1>Academi<span>CORE</span> </h1>
-                    <p>Plataforma de servicios academicos para inscripciones, consultas, pagos y gestión estudiantil.</p>
+                    <p className={styles.description}>Plataforma de servicios academicos para inscripciones, consultas, pagos y gestión estudiantil.</p>
                     <Link to="/login" className={styles.loginButton}>
                         <img src="/assets/user.png" alt="Icono de usuario" />
                         <p>Iniciar sesión</p>
@@ -22,14 +22,16 @@ export const Banner = () => {
                     </p>
                     </Link>
                 </div>
-
-            <div
+            {
+                window.innerWidth>=748 ? 
+                <div
+            
                 id="bannerCarousel"
                 className="carousel slide"
                 data-bs-ride="carousel"
                 data-bs-interval="3000"
             >
-                <div className="carousel-inner">
+                <div className="carousel-inner" >
 
                     <div className="carousel-item active">
                         <img
@@ -75,7 +77,9 @@ export const Banner = () => {
                     <span className="carousel-control-next-icon"></span>
                 </button>
                 
-            </div>
+            </div> : ""
+            }
+            
 
             <div className={styles.overlay}>
                 

@@ -1,15 +1,31 @@
-
-
 .header {
-    width: 90%;
+    width: 85%;
     margin: auto;
     display: flex;
-    justify-content: space-between;
-    padding: 1rem 2rem;
+    justify-content: space-around;
     align-items: center;
-    background-color: #ffffff67;
-    backdrop-filter: blur(30px);
 
+    padding: 1rem 2rem;
+    position: fixed;
+
+
+
+    align-self: center;
+    z-index: 10;
+    border-radius: 3rem;
+
+}
+
+.overlay {
+    position: absolute;
+    width: 100vw;
+    height: 300px;
+    
+    mask-image: linear-gradient(to bottom, rgb(255, 255, 255) 50%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgb(255, 255, 255) 50%, rgba(0, 0, 0, 0) 100%);
+    z-index: -1;
+    background-color: #ffffff;
+    backdrop-filter: blur(100px);
 }
 
 .logoSection {
@@ -17,7 +33,10 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
-
+    z-index: 2;
+}
+.header nav{
+    z-index: 2;
 }
 
 .logoSection img {
@@ -28,11 +47,13 @@
 
 .logoDescription h1 {
     color: var(--primary-color);
-    font-size: 1.5rem;motion: ;
+    font-size: 1.5rem;
+    margin: 0;
 }
 
 .logoDescription p {
-    font-size: 1rem;margin: 0;
+    font-size: 1rem;
+    margin: 0;
     color: var(--font-color-light);
 }
 
@@ -47,7 +68,7 @@
 .headerLink {
     text-decoration: none;
     color: var(--font-color-dark);
-    
+
 
 }
 
@@ -69,6 +90,7 @@
     border: none;
     border-radius: 1rem;
     text-decoration: none;
+    z-index: 2;
 }
 
 .loginButton2 {
@@ -129,11 +151,13 @@
 
 @media (max-width: 748px) {
     .header {
-        width: 90%;
+        width: 100%;
         margin-top: 10px;
         border: 1px solid #e4e4e4;
         border-radius: 3rem;
-        min-height: 10vh;
+    }
+    .overlay{
+        display: none;
     }
 
     .header.grow {
@@ -158,8 +182,6 @@
         top: 10vh;
         left: 0;
         right: 0;
-
-
         display: flex;
         flex-direction: column;
         align-items: center;

@@ -8,6 +8,7 @@ export const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false)
     return (
         <header className={`${styles.header} ${menuOpen ? styles.grow : ""}`}>
+            <div className={styles.overlay}></div>
             <div className={styles.logoSection}>
                 <Link to="/" className={styles.imageContainer}>
                     <img src="/assets/logoUDC_normal.png" alt="Logo UDC" />
